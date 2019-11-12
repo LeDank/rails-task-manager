@@ -1,0 +1,13 @@
+<h1> Ajouter une tâche </h1>
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="name">Name: </label>
+  <input type="text" name="task[title]" id="name">
+
+  <label for="details">Details: </label>
+  <input type="text" name="task[details]" id="details">
+
+  <input type="submit">
+</form>
+
+<%= link_to 'Accueil', tasks_path(@task) %>

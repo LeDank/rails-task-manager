@@ -1,0 +1,15 @@
+<% link_to 'show details', task_path(@task) %>
+<h1> <%= @task.title %></h1>
+<div>
+      <% if @task.completed %>
+        <input type="checkbox" name="checkbox_name" id="checkbox_id" checked>
+      <% else %>
+        <input type="checkbox" name="checkbox_name" id="checkbox_id">
+      <% end %>
+      <%= @task.title %>
+      <%= @task.details %>
+      <%= link_to 'Supprimer une tâche', destroy_path(@task.destroy) %>
+    </div>
+<div>
+<%= link_to 'Toutes mes tâches', tasks_path(@task) %>
+</div>
